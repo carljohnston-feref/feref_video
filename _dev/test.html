@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Basic Banner Video Controls</title>
+		<link rel="stylesheet" type="text/css" href="css/feref_video.css" />
+
+	</head>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			background: #345678;
+		}
+
+		feref-video {
+			max-width: 500px;
+			margin: 15px auto;
+		}
+	</style>
+
+	<body>
+
+		<feref-video color="#3cb6ea" poster="img/poster.jpg" video-controls="autohide">
+			
+			<video id="video1">
+				<source src="media/video1.mp4" type="video/mp4">
+				<source src="media/video1.webm" type="video/webm">
+				Your browser does not support the HTML5 video tag.
+			</video>
+
+		</feref-video>
+
+		<feref-video color="#987654" poster="img/poster.jpg" video-controls="show">
+			
+			<video id="video2">
+				<source src="media/video2.mp4" type="video/mp4">
+				<source src="media/video2.webm" type="video/webm">
+				Your browser does not support the HTML5 video tag.
+			</video>
+
+		</feref-video>
+
+	</body>
+
+	<script src="js/feref_video.js"></script>
+	<script type="text/javascript">
+		video1.play();
+		video2.play();
+	</script>
+
+</html>
