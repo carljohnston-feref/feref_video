@@ -52,7 +52,7 @@ Developer's Github: https://github.com/carljohnstonuk
 			ul.setAttribute('id', 'controls-' + i);
 			ul.innerHTML = 
 				'<li class="play-pause paused" id="play-pause-' + i + '">' +
-					'<img src="img/feref-video/control_play.svg" />' +
+					'<img src="img/feref_video/control_play.svg" />' +
 				'</li>' +
 				'<li class="progress-click" id="pbar-click-' + i + '">' +
 					'<div class="progress-container" id="pbar-container-' + i + '">' +
@@ -60,10 +60,10 @@ Developer's Github: https://github.com/carljohnstonuk
 					'</div>' +
 				'</li>' +
 				'<li class="expand native" id="fullscreen-' + i + '">' +
-					'<img src="img/feref-video/control_fullscreen.svg" />' +
+					'<img src="img/feref_video/control_fullscreen.svg" />' +
 				'</li>' +
 				'<li class="mute-unmute" id="mute-unmute-' + i + '">' +
-					'<img src="img/feref-video/control_volume_high.svg" />' +
+					'<img src="img/feref_video/control_volume_high.svg" />' +
 				'</li>'
 			;
 		},
@@ -152,7 +152,7 @@ Developer's Github: https://github.com/carljohnstonuk
 
 			// If video is playing
 			videoEl.addEventListener('playing', function() {
-				playPauseControl.innerHTML = '<img src="img/feref-video/control_pause.svg" />';
+				playPauseControl.innerHTML = '<img src="img/feref_video/control_pause.svg" />';
 				update = setInterval(videoProgress, pBarUpdate);
 
 				videoControl(playPauseControl, 'pause');
@@ -161,7 +161,7 @@ Developer's Github: https://github.com/carljohnstonuk
 
 			// If video is paused
 			videoEl.addEventListener('pause', function() {
-				playPauseControl.innerHTML = '<img src="img/feref-video/control_play.svg" />';
+				playPauseControl.innerHTML = '<img src="img/feref_video/control_play.svg" />';
 				clearInterval(update);
 
 				videoControl(playPauseControl, 'play');
@@ -171,7 +171,7 @@ Developer's Github: https://github.com/carljohnstonuk
 			// If video has ended
 			videoEl.addEventListener('ended', function() {
 				videoEl.currentTime = 0;
-				playPauseControl.innerHTML = '<img src="img/feref-video/control_replay.svg" />';
+				playPauseControl.innerHTML = '<img src="img/feref_video/control_replay.svg" />';
 				clearInterval(update);
 
 				videoControl(playPauseControl, 'play');
@@ -199,7 +199,7 @@ Developer's Github: https://github.com/carljohnstonuk
 					controlVideo.classList.remove('fullscreen');
 					controlVideo.parentElement.removeAttribute('style');
 					fullscreenControl.className = "expand native";
-					fullscreenControl.innerHTML = '<img src="img/feref-video/control_fullscreen.svg" />';
+					fullscreenControl.innerHTML = '<img src="img/feref_video/control_fullscreen.svg" />';
 				}
 
 				document.addEventListener('fullscreenchange', exitFullscreenVideo);
@@ -218,7 +218,7 @@ Developer's Github: https://github.com/carljohnstonuk
 						controlVideo.classList.add('fullscreen');
 						controlVideo.style.zIndex = 2147483647;
 						fullscreenControl.className = "expand fullscreen";
-						fullscreenControl.innerHTML = '<img src="img/feref-video/control_fullscreen_exit.svg" />';
+						fullscreenControl.innerHTML = '<img src="img/feref_video/control_fullscreen_exit.svg" />';
 						exitFullscreenListener();
 					}
 
@@ -270,7 +270,7 @@ Developer's Github: https://github.com/carljohnstonuk
 			}
 
 			// Full screen
-			fullscreenControl.innerHTML = '<img src="img/feref-video/control_fullscreen.svg" />';
+			fullscreenControl.innerHTML = '<img src="img/feref_video/control_fullscreen.svg" />';
 			fullscreenControl.addEventListener('click', function() {
 				var videoEl = document.getElementById(this.parentElement.parentElement.querySelector('video').getAttribute('id'));
 				var cls = fullscreenControl.className.split(" ")[1];
@@ -339,11 +339,11 @@ Developer's Github: https://github.com/carljohnstonuk
 				
 				switch(isMuted) {
 					case true:
-						muteUnmuteControl.innerHTML = '<img src="img/feref-video/control_volume_mute.svg" />';
+						muteUnmuteControl.innerHTML = '<img src="img/feref_video/control_volume_mute.svg" />';
 						break;
 
 					case false:
-						muteUnmuteControl.innerHTML = '<img src="img/feref-video/control_volume_high.svg" />';
+						muteUnmuteControl.innerHTML = '<img src="img/feref_video/control_volume_high.svg" />';
 						break;
 				}
 			})
